@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $colorPrimary;
+  font-family: 'Roboto', sans-serif;
+  font-size: $fontSizeBasic;
+  margin: 0;
+}
+
+.main-title {
+  width: $searchTitleWidth;
+  padding: 0 $fontSizeBasic;
+  color: $colorWhite;
+}

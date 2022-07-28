@@ -1,0 +1,65 @@
+@use 'variables' as *;
+
+.movie {
+    position: relative;
+    width: $movieWidth;
+    margin: $fontSizeBasic;
+    background-color: $colorSecondary;
+    box-shadow: $movieBoxShadow;
+    border-radius: $movieBorderRadius;
+
+    overflow: hidden;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-img {
+        width: 100%;
+    }
+
+    &-info {
+        color: $colorTextLight;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5 * $fontSizeBasic $fontSizeBasic;
+
+        &--title {
+            letter-spacing: $movieTitleLetterSpacing;
+            margin: 0;
+        }
+        &--raiting {
+            background-color: $colorPrimary;
+            padding: 0.25 * $fontSizeBasic 0.5 * $fontSizeBasic;
+            border-radius: $movieBorderRadius;
+
+            &--top {
+                color: $colorRaitingTop;
+            }
+            &--middle {
+                color: $colorRaitingMiddle;
+            }
+            &--down {
+                color: $colorRaitingDown;
+            }
+        }
+    }
+
+    &-description {
+        background-color: $colorWhite;
+        padding: 2 * $fontSizeBasic;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 100%;
+        transform: translateY(101%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover &-description {
+        transform: translateY(0);
+    }
+}

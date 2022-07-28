@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+.main {
+    &-header {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: $colorSecondary;
+    }
+
+    &-btn {
+        cursor: pointer;
+        color: $colorWhite;
+        border: none;
+        background-color: transparent;
+        font-size: $fontSizeBasic;
+        font-weight: bold;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $colorPrimary;
+        }
+    }
+}
+
+.search-input {
+    background-color: transparent;
+    border: 2px solid $colorPrimary;
+    border-radius: $borderRadiusBasic;
+    font-family: inherit;
+    font-size: $fontSizeBasic;
+    padding: 0.5 * $fontSizeBasic $fontSizeBasic;
+    color: $colorWhite;
+    transition: background-color 0.2s ease-in-out;
+
+    &::placeholder {
+        color: darken($colorWhite, 30%);
+    }
+
+    &:focus {
+        outline: none;
+        background-color: $colorPrimary;
+    }
+}
